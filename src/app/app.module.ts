@@ -6,9 +6,17 @@ import { HomeModule } from './home/home.module';
 import { SearchModule } from './search/search.module';
 import { AppComponent } from './app.component';
 import { Routing } from './app.route';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { SearchboxComponent } from './searchbox/searchbox.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    LoginComponent,
+    HeaderComponent,
+    SearchboxComponent
   ],
   imports: [
     BrowserModule,

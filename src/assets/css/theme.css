@@ -9968,6 +9968,7 @@ textarea.form-control {
   height: 38px;
   padding: 0 10px;
   width: 100%;
+  border:none;
 }
 
 /* line 61, ../sass/theme/gui/_forms.scss */

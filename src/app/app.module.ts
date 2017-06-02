@@ -10,6 +10,11 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { firebaseConfig } from './shared/constants/constant';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,10 @@ import { SearchboxComponent } from './searchbox/searchbox.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpModule,  
+    AngularFireModule.initializeApp(firebaseConfig), // imports firebase/app needed for everything
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     HomeModule,
     SearchModule,
     Routing

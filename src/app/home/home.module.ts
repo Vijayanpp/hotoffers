@@ -10,11 +10,14 @@ import { GiftvoucherComponent } from './components/giftvoucher/giftvoucher.compo
 import { LatestComponent } from './components/latest/latest.component';
 import { OurbrandsComponent } from './components/ourbrands/ourbrands.component';
 import { DontmissofferComponent } from './components/dontmissoffer/dontmissoffer.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   imports: [
     CommonModule,
-    routing
+    routing,
+    CarouselModule.forRoot(),
+
   ],
   declarations: [HomeComponent, GalleryComponent, HotofferoftodayComponent, SignupComponent, ProducttabComponent, GiftvoucherComponent, LatestComponent, OurbrandsComponent, DontmissofferComponent]
 })

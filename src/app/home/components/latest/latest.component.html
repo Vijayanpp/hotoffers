@@ -1,11 +1,11 @@
 <section class="highlight-thumbs">
 						<div class="container">
 							<div class="row">
-								<div class="col-xs-6 col-md-3">
+								<div class="col-xs-6 col-md-3" *ngFor='let item of saleoftheday|async'>
 									<h3>Latest deals</h3>
 									<div class="thumb-item">
 										<div class="thumb-item-img">
-											<img class="img-responsive" src="assets/images/products/product-9.jpg" alt="">
+											<img class="img-responsive" src="{{item.imgUrl}}" alt="">
 											<span class="thumb-act thumb-act-first">
 												<a href="#" class="btn-cart"><i class="fa fa-shopping-cart"></i></a>
 												<a data-target="#quickview-detail" data-toggle="modal" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
@@ -15,10 +15,10 @@
 										</div>
 										<div class="thumb-item-content">
 											<div class="star-rating pull-right" title="Rated 5.00 out of 5">
-												<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
+												<span style="width:100%"><strong class="rating">{{item}}</strong> out of 5</span>
 											</div>
-											<h3><a href="#">Silver Stainless Steel</a></h3>
-											<p class="product-price"><del>$150.00</del> <ins>$280.00</ins></p>
+											<h3><a href="#">{{item.title}}</a></h3>
+											<p class="product-price"><del>{{item.oldPrice}}</del> <ins>{{item.newPrce}}</ins></p>
 										</div>
 									</div>
 									<div class="countdown countdown-big" data-countdown="Jul 7, 2014 5:30:00"></div>
@@ -26,196 +26,63 @@
 								<div class="col-xs-6 col-md-3">
 									<h3>Must have</h3>
 									<ul class="list-thumbs-pro">
-										<li class="product">
+										<li class="product" *ngFor='let item of musthave|async'>
 											<div class="thumb-item">
 												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-1.jpg" alt=""></a>
+													<a href="#"><img width="80" src="{{item.imgUrl}}" alt=""></a>
 												</div>
 												
 												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
+													<h3><a href="#">{{item.title}}</a></h3>
 													<div class="star-rating" title="Rated 5.00 out of 5">
 														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-2.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-6.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-7.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
+													<p class="product-price"><ins>{{item.price}}</ins></p>
 												</div>
 											</div>
 										</li>
 									</ul>
+									
 								</div>
 								<div class="col-xs-6 col-md-3 clear-left">
 									<h3>On Sale</h3>
 									<ul class="list-thumbs-pro">
-										<li class="product">
+										<li class="product" *ngFor='let item of onsale|async'>
 											<div class="thumb-item">
 												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-3.jpg" alt=""></a>
+													<a href="#"><img width="80" src="{{item.imgUrl}}" alt=""></a>
 												</div>
 												
 												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
+													<h3><a href="#">{{item.title}}</a></h3>
 													<div class="star-rating" title="Rated 5.00 out of 5">
 														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
+													<p class="product-price"><ins>{{item.price}}</ins></p>
 												</div>
 											</div>
 										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-4.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-5.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-11.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
+									
 									</ul>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<h3>Best Seller</h3>
 									<ul class="list-thumbs-pro">
-										<li class="product">
+										<li class="product" *ngFor='let item of bestseller|async'>
 											<div class="thumb-item">
 												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-13.jpg" alt=""></a>
-												</div>
-												
+													<a href="#"><img width="80" src="{{item.imgUrl}}" alt=""></a>
+												</div>												
 												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
+													<h3><a href="#">{{item.title}}</a></h3>
 													<div class="star-rating" title="Rated 5.00 out of 5">
 														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
+													<p class="product-price"><ins>{{item.price}}</ins></p>
 												</div>
 											</div>
 										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-12.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-10.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
-										<li class="product">
-											<div class="thumb-item">
-												<div class="thumb-item-img">
-													<a href="#"><img width="80" src="assets/images/products/product-9.jpg" alt=""></a>
-												</div>
-												
-												<div class="thumb-item-content">
-													<h3><a href="#">Striped full skirt</a></h3>
-													<div class="star-rating" title="Rated 5.00 out of 5">
-														<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-													</div>
-													<p class="product-price"><ins>$280.00</ins></p>
-												</div>
-											</div>
-										</li>
+									
 									</ul>
 								</div>
 							</div>

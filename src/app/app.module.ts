@@ -14,6 +14,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './shared/constants/constant';
+import { GiftvoucherresultComponent } from './giftvoucherresult/giftvoucherresult.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
+import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { firebaseConfig } from './shared/constants/constant';
     FooterComponent,
     LoginComponent,
     HeaderComponent,
-    SearchboxComponent
+    SearchboxComponent,
+    GiftvoucherresultComponent,
+    AboutusComponent,
+    ContactusComponent,
+    TermsandconditionsComponent,
+    PrivacypolicyComponent
   ],
   imports: [
     BrowserModule,

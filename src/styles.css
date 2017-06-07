@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 0;
+}

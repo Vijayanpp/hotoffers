@@ -9,6 +9,7 @@ import { Routing } from './app.route';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';

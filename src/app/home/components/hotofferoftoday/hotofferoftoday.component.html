@@ -1,56 +1,16 @@
-		<div class="row">
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-1.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Long Sleeve Shirts</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-2.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Jean</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-3.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Shirts</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-4.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Bags</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-5.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Watches</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4">
-									<div class="cat-thumb-item cat-thumb-item-grid">
-										<img alt="Autumn / Winter 2014" src="assets/images/products/lg-product-6.jpg" class="img-responsive">
-										<div class="cat-caption bg-color7">
-											<h3><a href="#">Accessories</a></h3>
-											<p><a href="#">Shop now</a></p>
-										</div>	
-									</div>
-								</div>
-							</div>
+<section class="highlight-shop grid-pro">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4" *ngFor='let hotoffer of items| async'>
+        <div class="cat-thumb-item cat-thumb-item-grid">
+          <img alt="Autumn / Winter 2014" src="{{hotoffer.imgUrl}}" class="img-responsive">
+          <div class="cat-caption bg-color7">
+            <h3><a href="#">{{hotoffer.title}}</a></h3>
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>

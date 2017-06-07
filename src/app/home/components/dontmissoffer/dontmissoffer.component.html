@@ -1,30 +1,30 @@
 <section class="latest-posts highlight-latest-post">
-						<div class="container">
-							<article class="post post-mid">
-								<div class="row row-fluid">
-									<div class="col-sm-6">
-										<div class="post-image">
-											<a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/demo-blog-1.jpg" alt="Blog"></a>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="row row-fluid post-head">
-											<div class="col-xs-2 post-date">
-												<span class="day">07</span>
-												<span class="month-year">Nov 2014</span>
-											</div>	
-											<div class="post-meta">
-												<h3><a href="blog-single.html">Image Post Type</a></h3>
-												<p><span>By <a href="#">John Doe</a></span>
-												<span>in <a href="#">Blog</a></span>
-												<span><i class="fa fa-comment-o"></i> <a href="#">212</a></span></p>
-											</div>
-										</div>
-										<div class="post-content">
-											<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-										</div>
-									</div>
-								</div>	
-							</article>
-						</div>
-					</section>
+  <div class="container">
+    <article class="post post-mid">
+      <div class="row row-fluid">
+        <div class="col-sm-6" *ngFor='let item of items|async'>
+		
+          <div class="post-image">
+            <a href="blog-single.html"><img class="img-responsive" src="{{item.imgUrl}}" alt="Blog"></a>
+          </div>
+        </div>
+        <div class="col-sm-6"  *ngFor='let item of items|async'>
+          <div class="row row-fluid post-head">
+            <div class="col-xs-2 post-date">
+              <span class="day">{{item.price}}</span>
+              <span class="month-year">only</span>
+            </div>
+            <div class="post-meta">
+              <h3><a href="blog-single.html">{{item.title}}</a></h3>
+              <p><span>In <a href="#">{{item.subtitle}}</a></span>
+                
+            </div>
+          </div>
+          <div class="post-content">
+            <p>{{item.content}}</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

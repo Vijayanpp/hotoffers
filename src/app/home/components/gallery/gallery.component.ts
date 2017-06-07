@@ -12,7 +12,8 @@ export class GalleryComponent implements OnInit {
 
   public items: FirebaseListObservable<any>;
   constructor(public db: AngularFireDatabase) {
-    this.items = db.list('/slider');
+  this.items = db.list('/slider');
+
   }
   ngOnInit() {
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-hotofferoftoday',
   templateUrl: './hotofferoftoday.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotofferoftodayComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  public items: FirebaseListObservable<any>;
+  constructor(public db: AngularFireDatabase) {
+    this.items = db.list('/hotoffers');
   }
+  ngOnInit() {
+
+  }
+
 
 }

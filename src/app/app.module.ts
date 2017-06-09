@@ -9,8 +9,15 @@ import { Routing } from './app.route';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
+import 'rxjs/Rx';
+
+import { rootReducer } from './store/rootReducer';
+import { SearchActions } from './store/actions/search.action';
 import { SearchboxComponent } from './searchbox/searchbox.component';
+import { SearchresultService } from './services/searchresult.service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -37,15 +44,16 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,  
+    HttpModule,
     AngularFireModule.initializeApp(firebaseConfig), // imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     HomeModule,
     SearchModule,
-    Routing
+    Routing,
+    StoreModule.provideStore(rootReducer)
   ],
-  providers: [],
+  providers: [SearchresultService,SearchActions],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

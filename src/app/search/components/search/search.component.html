@@ -1,3 +1,16 @@
-<p>
-  search works!
-</p>
+<section class="highlight-shop grid-pro">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4" *ngFor='let result of searchresult'>
+        <div class="cat-thumb-item cat-thumb-item-grid">
+          <img alt="Autumn / Winter 2014" src="{{result.imgUrl}}" class="img-responsive">
+          <div class="cat-caption bg-color7">
+            <h3><a href="#">{{result.title}}</a></h3> 
+            <p><a href="#">Shop now</a></p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>

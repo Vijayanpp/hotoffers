@@ -5,7 +5,7 @@ import { GiftvoucherresultComponent } from './giftvoucherresult/giftvoucherresul
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
-import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+// import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +14,7 @@ export const routes: Routes = [
     { path: 'giftvouchers', component: GiftvoucherresultComponent },
     { path: 'aboutus', component: AboutusComponent },
     { path: 'contactus', component: ContactusComponent },
-    { path: 'privacypolicy', component: PrivacypolicyComponent },
+    // { path: 'privacypolicy', component: PrivacypolicyComponent },
     { path: 'termsandcondition', component: TermsandconditionsComponent },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }
 

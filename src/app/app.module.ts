@@ -26,7 +26,8 @@ import { GiftvoucherresultComponent } from './giftvoucherresult/giftvoucherresul
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
-import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+// import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import { MenubarComponent } from './menubar/menubar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
     AboutusComponent,
     ContactusComponent,
     TermsandconditionsComponent,
-    PrivacypolicyComponent
+    // PrivacypolicyComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,

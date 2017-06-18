@@ -1,5 +1,6 @@
-import { SearchResult } from './searchresult';
+import { SearchResult, SearchWord} from './searchresult';
 
 export interface AppState {
     readonly searchresult: SearchResult;
+    readonly searchword:SearchWord;
 }

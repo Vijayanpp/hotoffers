@@ -14,4 +14,9 @@ export class SearchresultService {
 return this.store.select(appState => appState.searchresult);
     
   }
+
+   getSearchWord():Observable<any>{
+return this.store.select(appState => appState.searchword);
+    
+  }
 }

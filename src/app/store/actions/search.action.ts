@@ -11,7 +11,7 @@ export class SearchActions {
     constructor(private store: Store<AppState>) {
     }
 
-    searchQuery(data: Object) {
+    searchWord(data: Object) {
         this.store.dispatch(createAction(SearchActions.STARTSEARCH, data));
     }
 
